@@ -1,0 +1,43 @@
+% !TeX program = xelatex
+\documentclass[11pt, a4paper,margin=.7in]{book}
+\usepackage[paperwidth=210mm, paperheight=297mm, textwidth=8in,textheight=9in]{geometry}
+ 
+%\usepackage[margin=0in]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{الفاظ القرآن}
+\lhead{www.bakarabu.wordpress.com}
+%\lfoot{ \LaTeX ٹائپ سیٹ  }
+\rfoot{\thepage}
+\title{الفاظ القرآن}
+\author{ابوبکرصدیق}
+\usepackage{booktabs}
+\usepackage{ltxtable}
+\usepackage{polyglossia}
+\usepackage[T1]{fontenc}
+\usepackage[table]{xcolor}    % loads also »colortbl«
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{bidi}
+\usepackage{bidi-longtable}
+
+\setmainlanguage{urdu}
+\setotherlanguage{english}
+ 
+\newfontfamily\urdufont[Script=Arabic]{_PDMS_Saleem_QuranFont}
+\newfontfamily{\englishfont}[Mapping=tex-text, Scale=1, Script=Latin, Color=gray]{_PDMS_Saleem_QuranFont}
+\newfontfamily{\entryfont}[Mapping=tex-text, Scale=1, Script=Latin, Color=black]{_PDMS_Saleem_QuranFont}
+ \date{}
+\begin{document}
+\maketitle
+ 
+\newcolumntype{A}{>{\hsize=.5in\raggedleft \urdufont\setRL}X}
+\newcolumntype{B}{>{\hsize=3in\raggedright\urdufont\setRL}X}
+%\newcolumntype{C}{>{\hsize=.1in\raggedright\englishfont\setLR}X}
+%\newcolumntype{C}{>{\hsize=.1in\raggedright\entryfont\setLR}X}
+%\newcolumntype{D}{>{\hsize=.1in\raggedright\englishfont}X}
+%\newcommand{\Lt}[1]{\beginL #1\endL} % Left
+\LTXtable{\textwidth}{dict.tex}
+
+\end{document}
